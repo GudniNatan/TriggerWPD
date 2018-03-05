@@ -2,6 +2,7 @@
 	let xhttp = new XMLHttpRequest();
 	let btn = document.getElementById('submitButton');
 	let url = document.getElementById('url');
+	let progress = document.getElementById('progress');
 	function sleep(ms) {
   		return new Promise(resolve => {
     		setTimeout(() => {
@@ -25,6 +26,7 @@
 		event.preventDefault();
 		let val = url.value;
 		url.value = "";
+		progress.value = "Working...";
 		if (val[val.length - 1] !== '/')
 		{
 			val += "/foo/bar/";
@@ -36,6 +38,7 @@
 			breaker(val);
 			await sleep(100);
 		}
+		progress.value = "Done!";
 	});
 })();
 

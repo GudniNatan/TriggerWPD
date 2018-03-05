@@ -13,7 +13,7 @@
 
 	async function breaker(url) {
 		// body...
-		await sleep(2000);
+		await sleep(1000);
 		try{
 			var i = document.createElement("img");
 			i.src = url + Math.floor(Math.random() * 200);

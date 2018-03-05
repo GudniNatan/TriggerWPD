@@ -24,6 +24,7 @@
 	btn.addEventListener("click", function(event) {
 		event.preventDefault();
 		let val = url.value;
+		url.value = "";
 		if (val[val.length - 1] !== '/')
 		{
 			val += "/foo/bar/";

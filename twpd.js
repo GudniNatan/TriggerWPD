@@ -21,7 +21,7 @@
 			console.log(err);
 		}
 	}
-	btn.addEventListener("click", function(event) {
+	btn.addEventListener("click", async function(event) {
 		event.preventDefault();
 		let val = url.value;
 		url.value = "";
@@ -34,6 +34,7 @@
 		}
 		for (var i = 0; i < 50; i++) {
 			breaker(val);
+			await sleep(200);
 		}
 	});
 })();

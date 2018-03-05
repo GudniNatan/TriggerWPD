@@ -29,11 +29,9 @@
 		progress.textContent = "Working...";
 		if (val[val.length - 1] !== '/')
 		{
-			val += "/foo/bar/";
+			val += "/";
 		}
-		else{
-			val += "foo/bar/";
-		}
+		val += "foo/bar/";
 		for (var i = 0; i < 50; i++) {
 			breaker(val);
 			await sleep(100);

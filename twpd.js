@@ -34,7 +34,7 @@
 		}
 		for (var i = 0; i < 50; i++) {
 			breaker(val);
-			await sleep(200);
+			await sleep(100);
 		}
 	});
 })();

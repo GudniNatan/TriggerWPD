@@ -26,7 +26,7 @@
 		event.preventDefault();
 		let val = url.value;
 		url.value = "";
-		progress.value = "Working...";
+		progress.textContent = "Working...";
 		if (val[val.length - 1] !== '/')
 		{
 			val += "/foo/bar/";
@@ -38,7 +38,7 @@
 			breaker(val);
 			await sleep(100);
 		}
-		progress.value = "Done!";
+		progress.textContent = "Done!";
 	});
 })();
 
